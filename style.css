@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -15,7 +16,8 @@ body {
     bottom: 0;
     right: 0;
     width: 100vw;
-    height: auto;
+    height: 100vh;
+    object-fit: cover;
 }
 
 video {
@@ -34,13 +36,34 @@ video {
     background-color: rgba(255, 255, 255, 0.35);
 }
 
+.container {
+    min-width: 580px;
+    min-height: 304px;
+    margin: 0 auto;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    border-radius: 5px;
+    padding: 25px 50px;
+    justify-content: center;
+    z-index: 2;
+}
+
 
 /* media queries for responsive design */
-@media screen and (max-width:648px) {
+@media screen and (max-width:685px) {
     .video-background {
         width: 100vw;
         height: 100vh;
         object-fit: cover;
         object-position: 70%;
+    }
+
+    .container {
+        min-width: unset;
+        width: 95vw;
+        height: 245px;
+        margin: 10px;
+        padding: 20px;
     }
 }
